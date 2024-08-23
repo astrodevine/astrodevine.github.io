@@ -1,0 +1,76 @@
+
+body {
+  font-family: Arial, sans-serif; 
+  line-height: 1.6; 
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9; 
+}
+
+p {
+  color: #222;
+  margin: 10px 20px 0px 20px; 
+  padding: 10px;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  color: #333;
+  margin: 5px 10px 5px 10px; 
+}
+
+
+
+
+
+
+
+
+.resultsTable {
+
+    height: 400px; 
+    overflow-y: auto; 
+    border: 1px solid #ddd;
+}
+
+table {
+    width: 100%; 
+    border-collapse: collapse; 
+}
+
+th, td {
+    border: 1px solid #ddd; /* Add borders to table cells */
+    padding: 8px; /* Add padding for readability */
+    text-align: left; /* Align text to the left */
+}
+
+.tabs {
+    margin: 20px 30px;
+    display: flex; 
+    justify-content: space-between;
+}
+
+.tab-button {
+    padding: 10px;
+    cursor: pointer;
+    flex: 1; 
+    margin: 0 4px; 
+
+}
+
+.tab-content {
+    margin: 5px 20px;
+    display: none;
+}
+
+.tab-content table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tab-content th, .tab-content td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yellow Ball Data Lookup</title>
+  <link rel="stylesheet" href="styles.css"> 
+
+</head>
+
+<main>
+    <h2>
+        Yellowball Research
+    </h2>
+    <div style="display: flex; margin-right: 30px;">
+        <div style="width: 65%;">
+            <p>
+                Put your text here
+            </p>
+        </div>
+
+    </div>
+
+    <br>
+  
+    <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
+
+        <div style="display: inline-block; ">
+            <div style="display: flex;">
+                <div style="margin-right: 5px;">
+                    <label for="YBmax"> Yellowball Number: </label>
+                </div>
+                <div style="display: flex; gap: 3px; flex-direction: column;">
+                    <input type="text" id="YBmax" placeholder="Enter max YB number" oninput="searchData()" />
+                    <input type="text" id="YBmin" placeholder="Enter min  YB number" oninput="searchData()" />
+                </div>
+            </div>
+        </div>
+
+        <div style="display: inline-block; ">
+            <div style="display: flex;">
+                <div style="margin-right: 5px;">
+                    <label for="YBmax"> Longitude: </label>
+                </div>
+                <div style="display: flex; gap: 3px; flex-direction: column;">
+                    <input type="text" id="lmax" placeholder="Enter max longitude" oninput="searchData()" />
+                    <input type="text" id="lmin" placeholder="Enter min  longitude" oninput="searchData()" />
+                </div>
+            </div>
+        </div>
+
+        <div style="display: inline-block; ">
+            <div style="display: flex;">
+                <div style="margin-right: 5px;">
+                    <label for="YBmax"> Latitude: </label>
+                </div>
+                <div style="display: flex; gap: 3px; flex-direction: column;">
+                    <input type="text" id="bmax" placeholder="Enter max latitude" oninput="searchData()" />
+                    <input type="text" id="bmin" placeholder="Enter min  latitude" oninput="searchData()" />
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    
+    <div class="tabs">
+        <button class="tab-button" onclick="showTable('table2')" style="width: 24%;">Table 2</button>
+        <button class="tab-button" onclick="showTable('table3')" style="width: 24%;">Table 3</button>
+        <button class="tab-button" onclick="showTable('table4')" style="width: 24%;">Table 4</button>
+        <button class="tab-button" onclick="showTable('table6')" style="width: 24%;">Table 6</button>
+        <!-- Add more buttons as needed -->
+    </div>
+    
+    <div id="table2" class="tab-content resultsTable">
+        <table class="resultsTable">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+  
+    <div id="table3" class="tab-content resultsTable">
+        <table>
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div id="table4" class="tab-content resultsTable">
+        <table class="resultsTable">
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="table6" class="tab-content resultsTable">
+        <table>
+            <thead>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <div style="margin: 5px 5px;">
+        <button id="downloadFilteredData" onclick="downloadCSV()">Download Filtered Data</button>
+        <button id="downloadCompleteData" onclick="downloadCSVall()">Download Complete Data</button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js"></script>
+    <script src="AstronomyCode/astronomy.js"></script>
+</main>
